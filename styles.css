@@ -1,0 +1,410 @@
+/* Global Styles */
+:root {
+    /* Dark theme (default) */
+    --primary-color: #ffd700;
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --card-bg: #1a1a1a;
+    --border-color: #333333;
+    --hover-color: #ffed4a;
+    --shadow-color: rgba(255, 215, 0, 0.2);
+}
+
+/* Light theme variables with #bbb2b2 as base */
+[data-theme="light"] {
+    --primary-color: #ffd700;
+    --background-color: #bbb2b2;  /* New light mode background */
+    --text-color: #000000;
+    --card-bg: #d4d4d4;          /* Lighter shade for cards */
+    --border-color: #a3a3a3;     /* Slightly darker for borders */
+    --hover-color: #ffb700;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+}
+
+a {
+    color: #ffd700;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffea00;
+}
+
+/* Sections */
+section {
+    background-color: var(--card-bg);
+    margin: 20px 0;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 9px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffea00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+}
+
+/* Form Elements */
+input, textarea, select {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #ffea00;
+    box-shadow: 0 0 5px rgba(255, 234, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background-color: var(--card-bg);
+    border-top: 2px solid var(--primary-color);
+    color: #b8b8b8;
+}
+
+/* Custom Classes */
+.gold-text {
+    color: #ffd700;
+}
+
+.gold-bg {
+    background-color: #ffd700;
+    color: #0a0a0a;
+}
+
+/* Product Cards */
+.product-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    cursor: none !important;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.product-card:hover ~ .custom-cursor,
+.product-card:hover ~ .custom-cursor-follower {
+    transform: scale(2);
+}
+
+.add-to-cart:hover ~ .custom-cursor,
+.add-to-cart:hover ~ .custom-cursor-follower {
+    transform: scale(1.5);
+    background-color: rgba(255, 215, 0, 0.2);
+}
+
+.image-container:hover ~ .custom-cursor,
+.image-container:hover ~ .custom-cursor-follower {
+    transform: scale(1.8);
+    border-color: #ffd700;
+}
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ffd700;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #ffd700;
+    color: #0a0a0a;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffd700;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffea00;
+}
+
+/* Animation for Links and Buttons */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+a:hover, .btn:hover {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Home Intro Styles */
+.home-intro {
+    text-align: center;
+    padding: 100px 20px 50px;
+    color: var(--text-color);
+}
+
+.home-intro header {
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 30px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.company-name-3d {
+    perspective: 500px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+.company-name-3d span {
+    display: inline-block;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--text-color);
+    text-shadow: 
+        0 1px 0 var(--primary-color),
+        0 2px 0 var(--primary-color),
+        0 3px 0 var(--border-color),
+        0 4px 0 var(--border-color),
+        0 5px 0 var(--border-color),
+        0 6px 1px var(--shadow-color),
+        0 0 5px var(--shadow-color),
+        0 1px 3px var(--shadow-color),
+        0 3px 5px var(--shadow-color),
+        0 5px 10px var(--shadow-color),
+        0 10px 10px var(--shadow-color),
+        0 20px 20px var(--shadow-color);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Add specific dark theme adjustments */
+[data-theme="dark"] .company-name-3d span {
+    text-shadow: 
+        0 1px 0 var(--primary-color),
+        0 2px 0 var(--primary-color),
+        0 3px 0 var(--border-color),
+        0 4px 0 var(--border-color),
+        0 5px 0 var(--border-color),
+        0 6px 1px rgba(255, 215, 0, 0.2),
+        0 0 5px rgba(255, 215, 0, 0.2),
+        0 1px 3px rgba(255, 215, 0, 0.3),
+        0 3px 5px rgba(255, 215, 0, 0.2),
+        0 5px 10px rgba(255, 215, 0, 0.25),
+        0 10px 10px rgba(255, 215, 0, 0.2),
+        0 20px 20px rgba(255, 215, 0, 0.15);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateZ(0) rotateX(0deg);
+    }
+    25% {
+        transform: translateZ(20px) rotateX(5deg);
+    }
+    75% {
+        transform: translateZ(-20px) rotateX(-5deg);
+    }
+}
+
+.home-intro p {
+    font-size: 1.2em;
+    color: var(--text-color);
+    margin-top: 30px;
+}
+/* Custom Cursor Styles */
+.custom-cursor {
+    width: 25px;
+    height: 20px;
+    border: 6px solid;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+}
+
+.custom-cursor-follower {
+    width: 10px;
+    height: 8px;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: all 0.10s ease;
+    mix-blend-mode: difference;
+}
+
+/* Theme-specific cursor colors */
+[data-theme="light"] .custom-cursor {
+    border-color: #000000;
+}
+
+[data-theme="light"] .custom-cursor-follower {
+    background-color: #000000;
+}
+
+[data-theme="dark"] .custom-cursor {
+    border-color: #ffffff;
+}
+
+[data-theme="dark"] .custom-cursor-follower {
+    background-color: #ffffff;
+}
+
+/* Hide default cursor */
+* {
+    cursor: none !important;
+}
+
+/* Show default cursor for mobile devices */
+@media (max-width: 768px) {
+    .custom-cursor, .custom-cursor-follower {
+        display: none;
+    }
+    * {
+        cursor: auto !important;
+    }
+}
+
+/* Special cursor states */
+.cursor-text {
+    position: absolute;
+    font-size: 12px;
+    color: #ffd700;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Product hover effect */
+.product-card:hover ~ .custom-cursor .cursor-text {
+    content: 'View';
+    opacity: 1;
+}
+
+/* Cart item hover effect */
+.cart-item:hover ~ .custom-cursor {
+    transform: scale(1.5);
+}
+
+/* Input field hover effect */
+input:hover ~ .custom-cursor,
+textarea:hover ~ .custom-cursor {
+    border-color: #ffd700;
+    mix-blend-mode: normal;
+}
+
+/* Header styles */
+.header-content {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Cards and sections */
+.product-card, 
+.contact-card,
+.cart-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+/* Text colors */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+}
+
+/* Links and buttons */
+.icon-link {
+    color: var(--primary-color);
+}
+
+.btn, 
+button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+/* Theme toggle animation */
+.theme-toggle {
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(180deg);
+}
+
+/* Additional theme-specific styles */
+[data-theme="light"] .product-card:hover {
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+[data-theme="light"] .custom-cursor {
+    mix-blend-mode: normal;
+}
+
+[data-theme="light"] .custom-cursor-follower {
+    mix-blend-mode: normal;
+}
+
+/* Favicon styles for dynamic generation */
+.favicon-canvas {
+    display: none;
+    width: 32px;
+    height: 32px;
+    background: #FFD700;
+    border-radius: 4px;
+    position: relative;
+}
+
+.favicon-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+}

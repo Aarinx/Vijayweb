@@ -1,0 +1,51 @@
+.home-intro {
+    text-align: center;
+    padding: 100px 20px 50px;
+    background-color: #f0f0f0;
+}
+
+.company-name-3d {
+    perspective: 500px;
+    text-align: center;
+    margin-bottom: 4px;
+    margin-top: 30px;
+}
+
+.company-name-3d span {
+    display: inline-block;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #100e0e04;
+    text-shadow: 
+        0 1px 0 #151111,
+        0 2px 0 #261a1a,
+        0 3px 0 #1e1414,
+        0 4px 0 #140f0f,
+        0 5px 0 #0a0808,
+        0 6px 1px rgba(0,0,0,.1),
+        0 0 5px rgba(0,0,0,.1),
+        0 1px 3px rgba(0,0,0,.3),
+        0 3px 5px rgba(0,0,0,.2),
+        0 5px 10px rgba(0,0,0,.25),
+        0 10px 10px rgba(0,0,0,.2),
+        0 20px 20px rgba(0,0,0,.15);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateZ(0) rotateX(0deg);
+    }
+    25% {
+        transform: translateZ(20px) rotateX(5deg);
+    }
+    75% {
+        transform: translateZ(-20px) rotateX(-5deg);
+    }
+}
+
+.home-intro p {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 30px;
+}

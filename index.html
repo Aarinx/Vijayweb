@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Vijay Kiran and Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    <!-- Add this line to include the about.css file -->
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script src="cursor.js"></script>
+    <script src="theme-switcher.js"></script>
+    <script src="favicon.js"></script>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div id="home-intro-placeholder"></div>
+        
+        <!-- Add this line to include the about section -->
+        <div id="about-placeholder"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Vijay Kiran and Company</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Remove duplicate fetch calls and keep only one
+        async function fetchData() {
+            try {
+                const [headerResponse, homeIntroResponse, aboutResponse] = await Promise.all([
+                    fetch('header.html'),
+                    fetch('home-intro.html'),
+                    fetch('about.html')
+                ]);
+
+                const [headerData, homeIntroData, aboutData] = await Promise.all([
+                    headerResponse.text(),
+                    homeIntroResponse.text(),
+                    aboutResponse.text()
+                ]);
+
+                document.getElementById('header-placeholder').innerHTML = headerData;
+                document.getElementById('home-intro-placeholder').innerHTML = homeIntroData;
+                document.getElementById('about-placeholder').innerHTML = aboutData;
+            } catch (error) {
+                console.error('Error loading content:', error);
+            }
+        }
+
+        fetchData();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Vijay Kiran and Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script src="cursor.js"></script>
+    <script src="theme-switcher.js"></script>
+    <script src="favicon.js"></script>
+    <div id="header-placeholder"></div>
+
+    <main class="cart-page">
+        <h1 class="page-title">Shopping Cart</h1>
+
+        <div class="cart-layout">
+            <!-- Left Side: Cart Items -->
+            <div class="cart-items-section">
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://via.placeholder.com/100" alt="Product">
+                    </div>
+                    <div class="item-details">
+                        <h3>Premium Sandalwood Incense Sticks</h3>
+                        <p class="price">₹199.00</p>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-btn">×</button>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://via.placeholder.com/100" alt="Product">
+                    </div>
+                    <div class="item-details">
+                        <h3>Traditional Brass Oil Lamp</h3>
+                        <p class="price">₹499.00</p>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-btn">×</button>
+                </div>
+            </div>
+
+            <!-- Center: Order Summary -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-items">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>₹698.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>₹50.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>GST (18%)</span>
+                        <span>₹125.64</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>₹873.64</span>
+                    </div>
+                </div>
+
+                <div class="coupon-section">
+                    <input type="text" placeholder="Enter Coupon Code">
+                    <button class="apply-btn">Apply</button>
+                </div>
+
+                <div class="payment-methods">
+                    <h3>Payment Method</h3>
+                    
+                    <!-- UPI Payment -->
+                    <div class="payment-option">
+                        <input type="radio" id="upi" name="payment" value="upi">
+                        <label for="upi">
+                            <div class="payment-logo">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="payment-info">
+                                <span class="payment-name">UPI Payment</span>
+                                <span class="payment-desc">Pay using any UPI app</span>
+                            </div>
+                            <div class="payment-icons">
+                                <img src="gpay-icon.png" alt="Google Pay">
+                                <img src="phonepe-icon.png" alt="PhonePe">
+                                <img src="paytm-icon.png" alt="Paytm">
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Card Payment -->
+                    <div class="payment-option">
+                        <input type="radio" id="card" name="payment" value="card">
+                        <label for="card">
+                            <div class="payment-logo">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="payment-info">
+                                <span class="payment-name">Card Payment</span>
+                                <span class="payment-desc">Credit/Debit Card</span>
+                            </div>
+                            <div class="payment-icons">
+                                <img src="visa-icon.png" alt="Visa">
+                                <img src="mastercard-icon.png" alt="Mastercard">
+                                <img src="rupay-icon.png" alt="RuPay">
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Net Banking -->
+                    <div class="payment-option">
+                        <input type="radio" id="netbanking" name="payment" value="netbanking">
+                        <label for="netbanking">
+                            <div class="payment-logo">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="payment-info">
+                                <span class="payment-name">Net Banking</span>
+                                <span class="payment-desc">All Indian banks</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Cash on Delivery -->
+                    <div class="payment-option">
+                        <input type="radio" id="cod" name="payment" value="cod">
+                        <label for="cod">
+                            <div class="payment-logo">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="payment-info">
+                                <span class="payment-name">Cash on Delivery</span>
+                                <span class="payment-desc">Pay when you receive</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="checkout-btn">Proceed to Checkout</button>
+                <a href="shop.html" class="continue-shopping">Continue Shopping</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Load header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        // Payment method toggle
+        document.querySelectorAll('input[name="payment"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const qrContainer = document.getElementById('qr-code-container');
+                qrContainer.style.display = this.value === 'upi' ? 'block' : 'none';
+            });
+        });
+
+        // Quantity controls
+        document.querySelectorAll('.quantity-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const quantitySpan = this.parentElement.querySelector('.quantity');
+                let quantity = parseInt(quantitySpan.textContent);
+
+                if (this.classList.contains('plus')) {
+                    quantity = Math.min(quantity + 1, 10); // Max 10 items
+                } else if (this.classList.contains('minus')) {
+                    quantity = Math.max(quantity - 1, 1); // Min 1 item
+                }
+
+                quantitySpan.textContent = quantity;
+                updateCartTotal();
+            });
+        });
+
+        // Remove item
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', function() {
+                const cartItem = this.closest('.cart-item');
+                cartItem.remove();
+                updateCartTotal();
+                checkEmptyCart();
+            });
+        });
+
+        // Update cart total
+        function updateCartTotal() {
+            // Add your cart total calculation logic here
+        }
+
+        // Check if cart is empty
+        function checkEmptyCart() {
+            const cartItems = document.querySelectorAll('.cart-item');
+            const cartContainer = document.querySelector('.cart-container');
+            const emptyCart = document.querySelector('.empty-cart');
+
+            if (cartItems.length === 0) {
+                cartContainer.style.display = 'none';
+                emptyCart.style.display = 'block';
+            }
+        }
+
+        // Place order
+        document.getElementById('place-order').addEventListener('click', function() {
+            const selectedPayment = document.querySelector('input[name="payment"]:checked');
+            if (!selectedPayment) {
+                alert('Please select a payment method');
+                return;
+            }
+            
+            // Add your order placement logic here
+            alert('Order placed successfully!');
+        });
+    </script>
+</body>
+</html>

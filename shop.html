@@ -1,0 +1,429 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="shop.css">
+    <!-- ... other head elements ... -->
+</head>
+<body>
+    <script src="cursor.js"></script>
+    <script src="theme-switcher.js"></script>
+    <script src="favicon.js"></script>
+    <header id="main-header" class="header-content">
+        <div class="logo-container">
+            <img src="image1.jpg" alt="Company Logo" class="logo">
+        </div>
+        <h1 class="company-name">Vijay Kiran and Company</h1>
+        <nav class="icons-container">
+            <a href="index.html" class="icon-link">
+                <i class="fas fa-home fa-2x golden-icon"></i>
+                <span class="icon-name">Home</span>
+            </a>
+            <a href="#" class="icon-link">
+                <i class="fas fa-info-circle fa-2x golden-icon"></i>
+                <span class="icon-name">About</span>
+            </a>
+            <a href="contact.html" class="icon-link">
+                <i class="fas fa-envelope fa-2x golden-icon"></i>
+                <span class="icon-name">Contact</span>
+            </a>
+            <a href="https://www.amazon.com" target="_blank" class="icon-link">
+                <i class="fab fa-amazon fa-2x golden-icon"></i>
+                <span class="icon-name">Amazon</span>
+            </a>
+            <a href="shop.html" class="icon-link">
+                <i class="fas fa-store fa-2x golden-icon"></i>
+                <span class="icon-name">Shop</span>
+            </a>
+            <a href="cart.html" class="icon-link">
+                <i class="fas fa-shopping-cart fa-2x golden-icon"></i>
+                <span class="icon-name">Cart</span>
+            </a>
+        </nav>
+    </header>
+
+    <section class="product-section">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-grid">
+                <!-- Product 1: Incense Sticks - Earthy Browns -->
+                <div class="product-card">
+                    <div class="image-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #8B4513;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #D2691E;"></div>
+                                </div>
+                            </div>
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #A0522D;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #CD853F;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Premium Sandalwood Incense Sticks (20 sticks)</h3>
+                        <div class="product-price">₹199</div>
+                        <button class="add-to-cart" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2: Camphor - Cool Blues -->
+                <div class="product-card">
+                    <div class="image-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #4682B4;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #5F9EA0;"></div>
+                                </div>
+                            </div>
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #87CEEB;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #00CED1;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Pure Camphor Tablets (100g)</h3>
+                        <div class="product-price">₹149</div>
+                        <button class="add-to-cart" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3: Kumkum - Vibrant Reds -->
+                <div class="product-card">
+                    <div class="image-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #8B0000;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #B22222;"></div>
+                                </div>
+                            </div>
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #DC143C;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #FF4500;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Natural Red Kumkum Powder (50g)</h3>
+                        <div class="product-price">₹99</div>
+                        <button class="add-to-cart" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4: Turmeric - Golden Yellows -->
+                <div class="product-card">
+                    <div class="image-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #DAA520;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #FFD700;"></div>
+                                </div>
+                            </div>
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #FFA500;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #F4A460;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Pure Turmeric Powder (100g)</h3>
+                        <div class="product-price">₹79</div>
+                        <button class="add-to-cart" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5: Brass Lamp - Metallic Bronzes -->
+                <div class="product-card">
+                    <div class="image-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #CD7F32;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #B87333;"></div>
+                                </div>
+                            </div>
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #D2691E;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #8B4513;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Traditional Brass Oil Lamp</h3>
+                        <div class="product-price">₹499</div>
+                        <button class="add-to-cart" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6: Chandan - Sandalwood Tones -->
+                <div class="product-card">
+                    <div class="image-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #DEB887;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #D2B48C;"></div>
+                                </div>
+                            </div>
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #F4A460;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #CD853F;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Sandalwood Paste (50g)</h3>
+                        <div class="product-price">₹299</div>
+                        <button class="add-to-cart" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7: Gangajal - River Blues and Greens -->
+                <div class="product-card">
+                    <div class="image-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #4682B4;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #20B2AA;"></div>
+                                </div>
+                            </div>
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #2E8B57;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #3CB371;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Pure Gangajal (200ml)</h3>
+                        <div class="product-price">₹99</div>
+                        <button class="add-to-cart" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8: Pooja Thali - Copper and Gold Tones -->
+                <div class="product-card">
+                    <div class="image-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #B87333;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #CD7F32;"></div>
+                                </div>
+                            </div>
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #DAA520;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #FFD700;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Decorative Brass Pooja Thali Set</h3>
+                        <div class="product-price">₹799</div>
+                        <button class="add-to-cart" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 9: Kalash - Copper and Bronze -->
+                <div class="product-card">
+                    <div class="image-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #CD7F32;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #B87333;"></div>
+                                </div>
+                            </div>
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #D2691E;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #8B4513;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Copper Kalash with Coconut</h3>
+                        <div class="product-price">₹449</div>
+                        <button class="add-to-cart" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 10: Aarti Set - Gold and Metallic s -->
+                <div class="product-card">
+                    <div class="image-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #FFD700;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #DAA520;"></div>
+                                </div>
+                            </div>
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #CD7F32;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #B87333;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Complete Aarti Set with Bell</h3>
+                        <div class="product-price">₹899</div>
+                        <button class="add-to-cart" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Product 11: Aarti Set - Gold and Metallic Tones -->
+                <div class="product-card">
+                    <div class="image-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #FFD700;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #DAA520;"></div>
+                                </div>
+                            </div>
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #CD7F32;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #B87333;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Complete Aarti Set with Bell</h3>
+                        <div class="product-price">₹899</div>
+                        <button class="add-to-cart" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 12: Aarti Set - Gold and Metallic Tones -->
+                <div class="product-card">
+                    <div class="image-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #FFD700;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #DAA520;"></div>
+                                </div>
+                            </div>
+                            <div class="image-row">
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #CD7F32;"></div>
+                                </div>
+                                <div class="image-container" onclick="openPopOut(this)">
+                                    <div class="color-sample" style="background-color: #B87333;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Complete Aarti Set with Bell</h3>
+                        <div class="product-price">₹899</div>
+                        <button class="add-to-cart" aria-label="Add to Cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pop-Out Image Viewer -->
+    <div id="popOutModal" class="popout-modal">
+        <span class="close" onclick="closePopOut()">&times;</span>
+        <img class="popout-content" id="popoutImage">
+        <div class="caption" id="popoutCaption"></div>
+    </div>
+</body>

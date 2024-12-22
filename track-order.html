@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order - Vijay Kiran and Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script src="cursor.js"></script>
+    <script src="theme-switcher.js"></script>
+    <script src="favicon.js"></script>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="image1.jpg" alt="Vijay Kiran and Company Logo" class="logo">
+                <h1 class="company-name">Vijay Kiran and Company</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shop.html">
+                            <i class="fas fa-store"></i>
+                            <span>Shop</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.amazon.in/storefront?me=A1L4HOLRIVMA9P&ref_=ssf_share" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-amazon"></i>
+                            <span>Amazon Store</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="track-order-page">
+        <h1>Track Your Order</h1>
+        <form id="track-order-form">
+            <input type="text" id="order-id" placeholder="Enter your Order ID" required>
+            <button type="submit">Track Order</button>
+        </form>
+        <div id="order-status" style="display: none;">
+            <h2>Order Status</h2>
+            <div class="status-timeline">
+                <div class="status-step">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Order Placed</p>
+                </div>
+                <div class="status-step">
+                    <i class="fas fa-circle"></i>
+                    <p>Processing</p>
+                </div>
+                <div class="status-step">
+                    <i class="fas fa-circle"></i>
+                    <p>Shipped</p>
+                </div>
+                <div class="status-step">
+                    <i class="fas fa-circle"></i>
+                    <p>Delivered</p>
+                </div>
+            </div>
+            <p id="estimated-delivery">Estimated Delivery: <span></span></p>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Your existing footer content -->
+    </footer>
+
+    <script src="track-order.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+.header-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 5px var(--shadow-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.logo-container {
+    flex: 0 0 auto;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.company-name {
+    flex: 1 1 auto;
+    text-align: left;
+    font-size: 55px;
+    margin: 0 100px 0 50px;
+    color: var(--text-color);
+}
+
+.icons-container {
+    display: flex;
+    gap: 20px;
+}
+
+.icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.icons-container .icon-link i {
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.icon-name {
+    font-size: 35px;
+    margin-top: 5px;
+    color: var(--text-color);
+}
+
+/* Theme-specific adjustments */
+[data-theme="light"] .header-content {
+    background-color: var(--background-color);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+[data-theme="dark"] .header-content {
+    background-color: var(--background-color);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+/* Hover effects */
+.icon-link:hover {
+    transform: translateY(-2px);
+}
+
+.icon-link:hover i {
+    color: var(--primary-color);
+}
+
+.icon-link:hover .icon-name {
+    color: var(--primary-color);
+}
+
+/* Rest of the existing styles remain the same */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .company-name {
+        margin: 200px 0;
+    }
+
+    .icons-container {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+/* Theme Toggle Styles in Header */
+.theme-toggle {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle i {
+    transition: transform 0.5s ease;
+}
+
+.theme-toggle:hover i {
+    transform: rotate(180deg);
+}
+
+.theme-toggle .icon-name {
+    color: var(--text-color);
+}
+
+/* Update golden icon color based on theme */
+.golden-icon {
+    transition: all 0.3s ease;
+}
+
+body {
+    padding-top: 100px; /* Adjust this value based on your header height */
+}
+
+/* Theme-specific icon colors */
+[data-theme="light"] .icons-container .icon-link i {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .icons-container .icon-link i {
+    color: var(--text-color);
+}
+
+/* Theme toggle specific styles */
+.theme-toggle i {
+    color: var(--text-color) !important;
+}
+
+.theme-toggle:hover i {
+    color: var(--primary-color) !important;
+}
